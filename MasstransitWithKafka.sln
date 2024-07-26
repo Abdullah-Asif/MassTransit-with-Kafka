@@ -1,8 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryProducer", "InventoryProducer\InventoryProducer.csproj", "{F6F84227-A4B3-44EC-BB4E-E7BEDDA4DD98}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryProducer", "InventoryProducer\InventoryProducer.csproj", "{F6F84227-A4B3-44EC-BB4E-E7BEDDA4DD98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryConsumer", "InventoryConsumer\InventoryConsumer.csproj", "{E773AFBF-9E4E-459B-935D-AAC52D2862AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryConsumer", "InventoryConsumer\InventoryConsumer.csproj", "{E773AFBF-9E4E-459B-935D-AAC52D2862AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageContract", "MessageContract\MessageContract.csproj", "{724C8492-D2CD-4261-8945-A6BB452CB10F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +23,12 @@ Global
 		{E773AFBF-9E4E-459B-935D-AAC52D2862AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E773AFBF-9E4E-459B-935D-AAC52D2862AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E773AFBF-9E4E-459B-935D-AAC52D2862AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{724C8492-D2CD-4261-8945-A6BB452CB10F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{724C8492-D2CD-4261-8945-A6BB452CB10F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{724C8492-D2CD-4261-8945-A6BB452CB10F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{724C8492-D2CD-4261-8945-A6BB452CB10F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

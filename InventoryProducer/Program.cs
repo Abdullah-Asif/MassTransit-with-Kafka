@@ -1,14 +1,27 @@
-using InventoryProducer;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
-
 builder.Services.AddSwaggerGen();
-
 builder.Services.AddControllers();
 
-builder.Services.AddSingleton<ProducerService>();
+builder.Services.AddMassTransit(x =>
+{
+    var kafkaConfig = builder.Configuration.GetSection("Kafka").Get<KafkaConfig>();
+
+    x.UsingInMemory((context, cfg) => { cfg.ConfigureEndpoints(context); });
+
+    x.AddRider(rider =>
+    {
+        rider.AddProducer<DemoEvent>(kafkaConfig.Topic);
+
+        rider.UsingKafka((context, k) =>
+        {
+            k.Host(kafkaConfig.Host);
+        });
+    });
+});
+
+builder.Services.AddScoped(typeof(Publisher<>));
 
 var app = builder.Build();
 
