@@ -9,9 +9,9 @@ namespace InventoryProducer.Controllers
     public class InventoryController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        private readonly Publisher<DemoEvent> _publisher;
+        private readonly Publisher<InventoryItemCreated> _publisher;
 
-        public InventoryController(IConfiguration configuration, Publisher<DemoEvent> publisher)
+        public InventoryController(IConfiguration configuration, Publisher<InventoryItemCreated> publisher)
         {
             _configuration = configuration;
             _publisher = publisher;
